@@ -14,6 +14,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "../../../index.css";
 
 import img1 from "../../../public/assets_h/img1.jpg";
 import img2 from "../../../public/assets_h/img2.jpg";
