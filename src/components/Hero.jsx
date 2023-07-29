@@ -126,7 +126,7 @@ const Hero = () => {
       <Navbar />
       <Container>
         <Left>
-          <Title>Think. Make. Solve.</Title>
+          <Title>Registration Prompt</Title>
           <WhatWeDo>
             <Line src="./img/line.png" />
             <Subtitle>What we Do</Subtitle>
