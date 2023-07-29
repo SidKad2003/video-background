@@ -43,7 +43,7 @@ function App() {
    {/* PS Prompt Sakshi*/}
    <Psprompt/>
    {/* Past Events Archives HARSH*/}
-   <Past />
+   {/* <Past /> */}
    {/* FAQs Sid*/}
    <Faq />
    <Works/>
