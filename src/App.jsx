@@ -13,7 +13,7 @@ import Itenary from "./components/additions/Itenary";
 
 const Container = styled.div`
   height: 100vh;
-  padding:10;
+  padding: 10;
   align-items: center;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -21,34 +21,34 @@ const Container = styled.div`
   scrollbar-width: none;
   color: white;
   background: url("./img/bg.jpeg");
-  &::-webkit-scrollbar{
+  &::-webkit-scrollbar {
     display: none;
   }
 `;
 
 function App() {
   return (
-   // <h1>HI</h1>
-   <Container>
-   {/* Registration Prompt Mujherjee*/}
-   <Hero />
-   {/* About Aryav*/}
-   <About/>
-   {/* Itenary MEET*/}
-   <Itenary/>
-   {/* Domains ARCHIE*/}
-   <Domains/>
-   {/* Sponsors Pankaj*/}
-   <Spons/>
-   {/* PS Prompt Sakshi*/}
-   <Psprompt/>
-   {/* Past Events Archives HARSH*/}
-   {/* <Past /> */}
-   {/* FAQs Sid*/}
-   <Faq />
-   <Works/>
- </Container>
-);
+    // <h1>HI</h1>
+    <Container>
+      {/* Registration Prompt Mujherjee*/}
+      <Hero />
+      {/* About Aryav*/}
+      <About />
+      {/* Itenary MEET*/}
+      <Itenary />
+      {/* Domains ARCHIE*/}
+      <Domains />
+      {/* Sponsors Pankaj*/}
+      <Spons />
+      {/* PS Prompt Sakshi*/}
+      <Psprompt />
+      {/* Past Events Archives HARSH*/}
+      <Past />
+      {/* FAQs Sid*/}
+      <Faq />
+      <Works />
+    </Container>
+  );
 }
 
 export default App;
