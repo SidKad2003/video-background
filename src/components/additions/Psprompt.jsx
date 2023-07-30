@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Trail, OrbitControls, Stars } from "@react-three/drei";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
+import "../landingpage.css"
 
 const Section = styled.div`
   height: 100vh;
@@ -21,11 +22,10 @@ const Section = styled.div`
 
 const Container = styled.div`
   height: 100%;
+  width: 98%;
   scroll-snap-align: center;
-  width: 1400px;
   display: flex;
   justify-content: space-between;
-
   @media only screen and (max-width: 768px) {
     width: 100%;
     flex-direction: column;
@@ -34,12 +34,26 @@ const Container = styled.div`
   }
 `;
 
+// const Left = styled.div`
+//   flex: 2;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   gap: 20px;
+
+//   @media only screen and (max-width: 768px) {
+//     flex: 1;
+//     align-items: center;
+//   }
+// `;
 const Left = styled.div`
   flex: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  position: relative; 
+  z-index: 1; 
 
   @media only screen and (max-width: 768px) {
     flex: 1;
@@ -78,6 +92,8 @@ const Title = styled.h1`
 }
 
   @media only screen and (max-width: 768px) {
+  font-size: 55px;
+
     text-align: center;
   }
 
@@ -117,14 +133,24 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
+// const Right = styled.div`
+//   flex: 3;
+//   position: relative;
+//   @media only screen and (max-width: 768px) {
+//     flex: 1;
+//     width: 100%;
+//   }
+// `;
 const Right = styled.div`
-  flex: 3;
+  flex: 2;
   position: relative;
+  z-index: 0; 
   @media only screen and (max-width: 768px) {
     flex: 1;
     width: 100%;
   }
 `;
+
 
 function ShootingStar() {
   const ref = useRef();
@@ -163,14 +189,31 @@ function Psprompt() {
   return (
     <Section>
       <Container>
-        <Left>
-          <Title>Problem Statements</Title>
-          <Subtitle>
-            Coming Soon....
-             {/*--------------- Optional-------------*/}
+        <div className="landingpage">
+          <div class="video-bg" >
+            {/* <Right> */}
+            <Canvas camera={{ position: [0, 0, 15] }}>
+              {/* <color attach="background" args={["black"]} /> */}
+              <ambientLight intensity={1} />
+              <ShootingStar />
+              <Stars saturation={false} count={400} speed={0.5} />
+              <OrbitControls />
+              <EffectComposer>
+                <Bloom mipmapBlur luminanceThreshold={1} />
+              </EffectComposer>
+            </Canvas>
+            {/* </Right> */}
+          </div>
+          <div className="bg-overlay"></div>
+          <div className="home-text">
+            {/* <Left> */}
+            <Title>Problem Statements</Title>
+            <Subtitle>
+              Coming Soon....
+              {/*--------------- Optional-------------*/}
 
 
-            {/* <ul>
+              {/* <ul>
               {problemsStats.map((prob) => (
                 <div key={prob.id}>
                   <h3>{prob.ps}</h3>
@@ -179,29 +222,20 @@ function Psprompt() {
               ))}
             </ul> */}
 
-          </Subtitle>
-          
-          {/* <Subtitle>
+            </Subtitle>
+
+            {/* <Subtitle>
           <a href="https://drive.google.com/file/d/1lSdW5UhYHZCi1z-PHuAqA76jmLflb6Cc/view?usp=sharing" target="_blank">
           <Button>PROBLEM STATEMENTS</Button>
          </a> 
           </Subtitle> */}
-          
-          <Timer />
-        </Left>
 
-        <Right>
-          <Canvas camera={{ position: [0, 0, 15] }}>
-            {/* <color attach="background" args={["black"]} /> */}
-            <ambientLight intensity={1} />
-            <ShootingStar />
-            <Stars saturation={false} count={400} speed={0.5} />
-            <OrbitControls />
-            <EffectComposer>
-              <Bloom mipmapBlur luminanceThreshold={1} />
-            </EffectComposer>
-          </Canvas>
-        </Right>
+            <Timer />
+            {/* </Left> */}
+          </div>
+        </div>
+
+
       </Container>
     </Section>
   );
@@ -245,7 +279,7 @@ const Timer = () => {
         padding: "10px",
         textAlign: "center",
         width: "400px",
-        borderRadius:"20px"
+        borderRadius: "20px"
       }}
     >
       <div

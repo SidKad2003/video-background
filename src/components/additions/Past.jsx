@@ -35,10 +35,8 @@ const Section = styled.div`
 const Container = styled.div`
   height: 750px;
   scroll-snap-align: center;
-  width: 95%;
-  // display: flex;
-  // justify-content: space-between;
-  // width: 50%;
+  display: flex;
+  justify-content: space-between;
   margin: 10rem auto;
   flex-direction: column;
   align-items: center;
@@ -71,7 +69,6 @@ const Button = styled.button`
   background-color: #da4ea2;
   color: white;
   font-weight: 500;
-  width: 120px;
   padding: 10px;
   border: none;
   border-radius: 5px;

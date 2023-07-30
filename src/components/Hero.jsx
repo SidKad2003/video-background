@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Navbar from "./Navbar";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
+// import ParticleBackground from "../ParticleBackground";
 
 const Section = styled.div`
   height: 100vh;
@@ -20,13 +21,11 @@ const Section = styled.div`
 
 const Container = styled.div`
   height: 100%;
-  scroll-snap-align: center;
-  width: 1400px;
+  scroll-snap-align: top;
   display: flex;
   justify-content: space-between;
 
   @media only screen and (max-width: 768px) {
-    width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -48,8 +47,8 @@ const Left = styled.div`
 
 const Title = styled.h1`
   font-size: 74px;
-
   @media only screen and (max-width: 768px) {
+    font-size: 60px;
     text-align: center;
   }
 `;
@@ -93,9 +92,9 @@ const Right = styled.div`
   position: relative;
   @media only screen and (max-width: 768px) {
     flex: 1;
-    width: 100%;
   }
-`;
+  `;
+  // width: 100%;
 
 const Img = styled.img`
   width: 800px;

@@ -12,7 +12,6 @@ const Section = styled.div`
 const Container = styled.div`
   height: 100vh;
   scroll-snap-align: center;
-  width: 1400px;
   display: flex;
   justify-content: space-between;
 `;
@@ -83,14 +82,13 @@ function about() {
     <Container>
       <Right>
         <Title>ABOUT</Title>
-       {/* <WhatWeDo>
+       <WhatWeDo>
           <Line src="./img/line.png" />
           <Subtitle>Who we Are</Subtitle>
         </WhatWeDo>
          <Desc>
-          a creative group of designers and developers with a passion for the
-          arts.
-        </Desc> */}
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, facere soluta? Soluta, id <br/> quam provident, doloremque voluptas inventore <br/>dolore praesentium non ipsum molestiae dolor hic culpa nobis vitae odit vel?
+        </Desc>
         <Button>See our works</Button>
       </Right>
     </Container>
