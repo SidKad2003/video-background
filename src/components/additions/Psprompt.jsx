@@ -152,30 +152,30 @@ const Right = styled.div`
 `;
 
 
-function ShootingStar() {
-  const ref = useRef();
-  useFrame((state) => {
-    const t = state.clock.getElapsedTime() * 2;
-    ref.current.position.set(
-      Math.sin(t) * 4,
-      Math.atan(t) * Math.cos(t / 2) * 2,
-      Math.cos(t) * 4
-    );
-  });
-  return (
-    <Trail
-      width={2}
-      length={8}
-      color={new THREE.Color(2, 1, 10)}
-      attenuation={(t) => t * t}
-    >
-      <mesh ref={ref}>
-        <sphereGeometry args={[0.25]} />
-        <meshBasicMaterial color={[10, 1, 10]} toneMapped={false} />
-      </mesh>
-    </Trail>
-  );
-}
+// function ShootingStar() {
+//   const ref = useRef();
+//   useFrame((state) => {
+//     const t = state.clock.getElapsedTime() * 2;
+//     ref.current.position.set(
+//       Math.sin(t) * 4,
+//       Math.atan(t) * Math.cos(t / 2) * 2,
+//       Math.cos(t) * 4
+//     );
+//   });
+//   return (
+//     <Trail
+//       width={2}
+//       length={8}
+//       color={new THREE.Color(2, 1, 10)}
+//       attenuation={(t) => t * t}
+//     >
+//       <mesh ref={ref}>
+//         <sphereGeometry args={[0.25]} />
+//         <meshBasicMaterial color={[10, 1, 10]} toneMapped={false} />
+//       </mesh>
+//     </Trail>
+//   );
+// }
 
 /*---------------------------------------ENTRY POINT -  MAIN FUNCTION-------------------------------- */
 
@@ -192,8 +192,8 @@ function Psprompt() {
         <div className="landingpage">
           <div class="video-bg" >
             {/* <Right> */}
-            <Canvas camera={{ position: [0, 0, 15] }}>
-              {/* <color attach="background" args={["black"]} /> */}
+            {/* <Canvas camera={{ position: [0, 0, 15] }}>
+              <color attach="background" args={["black"]} />
               <ambientLight intensity={1} />
               <ShootingStar />
               <Stars saturation={false} count={400} speed={0.5} />
@@ -201,7 +201,7 @@ function Psprompt() {
               <EffectComposer>
                 <Bloom mipmapBlur luminanceThreshold={1} />
               </EffectComposer>
-            </Canvas>
+            </Canvas> */}
             {/* </Right> */}
           </div>
           <div className="bg-overlay"></div>
